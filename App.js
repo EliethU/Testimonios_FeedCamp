@@ -1,6 +1,6 @@
 import { ScrollView, View, Text, StyleSheet, Image } from 'react-native'; 
 import Testimonio from './Componentes/Testimonio';
-import logo from './Imagenes/logo.png'; // Asegúrate de tener el logo en la carpeta images
+import logo from './Imagenes/logo.png'; 
 
 const App = () => {
   return (
@@ -13,7 +13,7 @@ const App = () => {
           pais="Singapur"
           cargo="Ingeniero de Software"
           empresa="Amazon"
-          foto={require('./Imagenes/1.png')} // Coloca aquí la imagen de Shawn
+          foto={require('./Imagenes/1.png')} 
           testimonio="Da miedo cambiar de carrera. Solo gané la confianza de que podía programar trabajando a través de las cientos de horas de lecciones gratuitas en FreeCodeCamp. Dentro de un año tuve un trabajo de seis cifras como ingeniero de software."
         />
         <Testimonio 
@@ -21,7 +21,7 @@ const App = () => {
           pais="Nigeria"
           cargo="Ingeniera de Software"
           empresa="ChatDesk"
-          foto={require('./Imagenes/2.png')} // Coloca aquí la imagen de Sarah
+          foto={require('./Imagenes/2.png')}
           testimonio="FreeCodeCamp fue la puerta de entrada a mi carrera como desarrolladora de software. El plan de estudios bien estructurado llevó mis conocimientos de programación al nivel de principiante total a uno muy seguro."
         />
         <Testimonio 
@@ -29,7 +29,7 @@ const App = () => {
           pais="Suecia"
           cargo="Ingeniera de Software en Spotify"
           empresa="ChatDesk"
-          foto={require('./Imagenes/3.png')} // Coloca aquí la imagen de Sarah
+          foto={require('./Imagenes/3.png')}
           testimonio="Siempre he tenido problemas para aprender JavaScript. He tomado muchos cursos, pero el curso de freeCodeCamp fue el que se quedó. Estudiar JavaScript, así como estructuras de datos y algoritmos en freeCodeCamp me dio las habilidades y la confianza que necesitaba para conseguir el trabajo de mis sueños como ingeniero de software en Spotify."
         />
       </ScrollView>
@@ -61,4 +61,3 @@ const styles = StyleSheet.create({
 });
 
 export default App;
-

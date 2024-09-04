@@ -1,13 +1,13 @@
 import { View, Text, Image, StyleSheet } from 'react-native';
 
-const Testimonio = ({ nombre, pais, cargo, empresa, foto, testimonio }) => {
+function Testimonio (props) {
   return (
-    <View style={styles.container}>
+    <View style={styles.testimoniocontainer}>
       <Image source={foto} style={styles.image} />
       <View style={styles.textContainer}>
         <Text style={styles.nombre}>{nombre} en {pais}</Text>
         <Text style={styles.cargo}>{cargo} en {empresa}</Text>
-        <Text style={styles.testimonio}>{`"${testimonio}"`}</Text>
+        <Text style={styles.testimonio}>{props.testimonio}</Text>
       </View>
     </View>
   );
@@ -16,14 +16,18 @@ const Testimonio = ({ nombre, pais, cargo, empresa, foto, testimonio }) => {
 export default Testimonio;
 
 const styles = StyleSheet.create({
-  container: {
+  testimonioContainer: {
     flexDirection: 'row',
     backgroundColor: '#fff',
+    borderRadius: 10,
     padding: 10,
-    marginVertical: 10,
-    borderRadius: 5,
-    minHeight: 250,
-    width: '100%',
+    marginBottom: 20,
+    alignItems: 'center',
+    elevation: 3,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.3, 
+    shadowRadius: 5,
   },
   image: {
     width: 80,
