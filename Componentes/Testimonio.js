@@ -1,54 +1,61 @@
-import { View, Text, Image, StyleSheet } from 'react-native';
+import React from 'react';
+import { View, Text, Image, StyleSheet,  } from 'react-native';
 
-function Testimonio (props) {
+const Testimonio = ({ nombre, pais, cargo, empresa, foto, testimonio }) => {
   return (
-    <View style={styles.testimoniocontainer}>
+    <View style={styles.testimonioContainer}>
       <Image source={foto} style={styles.image} />
       <View style={styles.textContainer}>
-        <Text style={styles.nombre}>{nombre} en {pais}</Text>
+        <Text style={styles.nombre}>{nombre} en {pais} </Text>
         <Text style={styles.cargo}>{cargo} en {empresa}</Text>
-        <Text style={styles.testimonio}>{props.testimonio}</Text>
+        <Text style={styles.testimonio}>{`"${testimonio}"`}</Text>
       </View>
     </View>
   );
 };
 
-export default Testimonio;
+export default Testimonio; 
 
 const styles = StyleSheet.create({
   testimonioContainer: {
     flexDirection: 'row',
     backgroundColor: '#fff',
-    borderRadius: 10,
-    padding: 10,
     marginBottom: 20,
-    alignItems: 'center',
-    elevation: 3,
+    padding: 10,
+    borderRadius: 10,
+    alignItems:'center',
     shadowColor: '#000',
     shadowOffset: { width: 0, height: 2 },
-    shadowOpacity: 0.3, 
-    shadowRadius: 5,
+    shadowOpacity: 0.8,
+    shadowRadius: 2,
+    elevation: 5,
   },
   image: {
-    width: 80,
-    height: 80,
-    borderRadius: 40,
-    marginRight: 10,
+    flex: 1,
+    height: 150,
+    width: '80',
+    borderRadius: 10,
+    marginRight:10
   },
   textContainer: {
-    flex: 1,
-    justifyContent: 'center',
+    flex: 2,
+    alignSelf: 'center',
+    marginLeft: 10,
   },
   nombre: {
-    fontSize: 16,
+    fontSize: 20,
     fontWeight: 'bold',
   },
-  cargo: {
-    fontSize: 14,
+  pais: {
+    fontSize: 18,
     color: 'gray',
-    marginVertical: 5,
+  },
+  cargo: {
+    fontSize: 16,
+    fontStyle: 'italic',
   },
   testimonio: {
-    fontSize: 14,
+    fontSize: 16,
+    marginTop: 10,
   },
 });

@@ -1,6 +1,6 @@
-import { ScrollView, View, Text, StyleSheet, Image } from 'react-native'; 
-import Testimonio from './Componentes/Testimonio';
-import logo from './Imagenes/logo.png'; 
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import logo from './Imagenes/logo.png';
+import Testimonio from './Componentes/Testimonio'; 
 
 const App = () => {
   return (
@@ -37,17 +37,19 @@ const App = () => {
   );
 };
 
+
+export default App;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 20,
     backgroundColor: '#f2f2f2',
   },
   logo: {
     width: '100%',
     height: 80,
     resizeMode: 'contain',
-    marginBottom: 20,
+    marginTop: 30,
   },
   title: {
     fontSize: 20,
@@ -59,5 +61,3 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 });
-
-export default App;
